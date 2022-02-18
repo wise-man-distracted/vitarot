@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarô Moderno</title>
+    
+    <!-- Remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <ul class="nav navbar-inverse nav-justified navbar-default navbar-fixed-top">
+        <li>
+            <a href="https://github.com/wise-man-distracted">
+                <i class="ri-github-fill ri-3x"></i>
+            </a>
+        </li>
+      </ul>
+</header>
+
+<body onload="init()">
+    <div class="jumbotron" id="hero">
+        <div class="container">
+            <h1 class="text-center">vitarot</h1>
+            <p class="text-center">Tarô feito usando Vite, Bootstrap, Tailwind e Javascript puro.<br>por Wellerson de Castro<br>@wise-man-distracted</p>
+            <p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button">Repositório no GitHub</a></p>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <div class="flex flex-col items-center text-center">
+                <div class="row">
+                    <!-- height="295.58px" width="175px" -->
+                    <div class="col-xs-4">
+                        <img class='card' id="card-1" src="images/deck/back.png">
+                        <span><a class="same-page-link" href="#card-1-name"><i class="ri-skull-2-line"></i></a></span>
+                    </div>
+                    <div class="col-xs-4">
+                        <img class='card' id="card-2" src="images/deck/back.png">
+                        <span><a class="same-page-link" href="#card-2-name"><i class="ri-moon-line"></i></a></span>
+                    </div>
+                    <div class="col-xs-4">
+                        <img class='card' id="card-3" src="images/deck/back.png">
+                        <span><a class="same-page-link" href="#card-3-name"><i class="ri-sun-line"></i></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="button-console">
+                    <button id="draw-card" class="btn btn-success" type="button" onclick="threeSpread()">Draw a
+                        Card</button>
+                    <div id="dev-console"
+                        style="margin-top: 10px; border: 1px solid brown ; border-radius: 10px; padding: 5px;">
+                        <button class="btn btn-primary" type="button" onclick="shuffle_deck()">Shuffle Deck</button>
+                        <button class="btn btn-info" type="button" onclick="create_deck()">Create Deck</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row" style="background-color: rgba(255, 248, 220, 0.377);">
+
+            <div class="col-md-4 card-details" style="padding-left: 10px; padding-right: 10px;">
+                <div class="card-details-sections card-details-name" id="card-1-name"></div>
+                <div class="card-details-sections card-details-short-desc" id="card-1-short-desc"></div>
+                <div class="card-details-sections card-details-description" id="card-1-description"></div>
+                <div class="card-details-sections" id="card-1-keywords"></div>
+                <div class="card-details-sections" id="card-1-keywords-inverted"></div>
+            </div>
+            <div class="col-md-4 card-details" style="padding-left: 10px; padding-right: 10px;">
+                <div class="card-details-sections card-details-name" id="card-2-name"></div>
+                <div class="card-details-sections card-details-short-desc" id="card-2-short-desc"></div>
+                <div class="card-details-sections" id="card-2-description"></div>
+                <div class="card-details-sections" id="card-2-keywords"></div>
+                <div class="card-details-sections" id="card-2-keywords-inverted"></div>
+            </div>
+            <div class="col-md-4 card-details" style="padding-left: 10px; padding-right: 10px;">
+                <div class="card-details-sections card-details-name" id="card-3-name"></div>
+                <div class="card-details-sections card-details-short-desc" id="card-3-short-desc"></div>
+                <div class="card-details-sections" id="card-3-description"></div>
+                <div class="card-details-sections" id="card-3-keywords"></div>
+                <div class="card-details-sections" id="card-3-keywords-inverted"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
