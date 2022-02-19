@@ -3,12 +3,12 @@ App feito para treinar conceitos de front-end e iteração com arrays e objetos.
 
 
 ## Teconologias usadas
-Vite
-Tailwind
-Bootstrap
-HTML
-JS
-CSS
+- Vite
+- Tailwind
+- Bootstrap
+- HTML
+- JS
+- CSS
 
 ## Como instalar
 0. Clone o repositório

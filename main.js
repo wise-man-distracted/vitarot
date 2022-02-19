@@ -14,8 +14,8 @@ var three_spread_count = 1
 
 function threeSpread(element) {
     if (deck.length) {
-        if (three_spread_count <= 3) {
-            if (three_spread_count == 3)
+        if (three_spread_count <= 4) {
+            if (three_spread_count == 4)
                 document.getElementById("draw-card").innerHTML = "New Spread"
             drawForElement(three_spread_count++)
             updateDeckCount()
@@ -58,9 +58,11 @@ function resetThreeCardSpread() {
     card1 = document.getElementById("card-1");
     card2 = document.getElementById("card-2");
     card3 = document.getElementById("card-3");
+    card3 = document.getElementById("card-4");
     card1.src = root + "/" + "back" + transparent_extension;
     card2.src = root + "/" + "back" + transparent_extension;
     card3.src = root + "/" + "back" + transparent_extension;
+    card4.src = root + "/" + "back" + transparent_extension;
 
     // resetar detalhes
     details_collection = document.getElementsByClassName("card-details")

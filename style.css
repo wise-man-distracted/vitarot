@@ -18,69 +18,25 @@ body {
     background-attachment: fixed;
 }
 
-.speaker-icon:hover {
-    color: cornflowerblue;
-}
-
-.speaker-disabled {
-    visibility: hidden;
-}
-
-@media only screen and (max-width: 600px) {
-    .speaker-icon {
-        font-size: 5rem;
-    }
-}
-
-#intro {
-    text-align: center;
-    color: rgb(110, 66, 38);
-    font-size: 2rem;
-    background-color: rgba(219, 174, 115, 0.438);
-    margin-bottom: 35px;
-    margin-top: 10px;
-}
-
-.intro {
-    text-align: center;
-    color: rgb(110, 66, 38);
-    font-size: 2rem;
-    background-color: rgba(219, 174, 115, 0.438);
-    margin-bottom: 15px;
-    margin-top: 10px;
-    /* font-family: 'Cookie', cursive; */
-    font-family: 'Patrick Hand', cursive;
-    /* font-family: 'Satisfy', cursive; */
-    /* font-family: 'Tangerine', cursive; */
-    /* border-radius: 0px 0px 20px 20px; */
-}
-
 #draw-card {
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
 }
 
 .card-stats {
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
     color: rgb(110, 66, 38);
 }
 
 .card-stats span{
     font-size: large;
-    /* font-weight: bold; */
 }
-
-/* @media only screen and (max-width: 600px) {
-    .card-stats {
-        visibility: hidden;
-    }
-} */
 
 .card {
     border: 3px solid #1b6c918a;
     border-radius: 4px;
     padding: 4px;
-    /* margin-right: 15px; */
-    /* margin-left: 15px; */
     box-shadow: 0px 0px 20px #5d9fbe
 }
 
@@ -89,8 +45,6 @@ body {
         border: 3px solid #1b6c918a;
         border-radius: 4px;
         padding: 4px;
-        /* margin-right: 15px; */
-        /* margin-left: 15px; */
         width: 100px;
         box-shadow: 0px 0px 20px #5d9fbe
     }
@@ -107,8 +61,8 @@ body {
 }
 
 #card-info {
-    font-family: 'Tangerine', cursive;
-    /* font-family: 'Cookie', cursive; */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
     text-align: center;
     margin-bottom: 35px;
     padding: 10px;
@@ -117,7 +71,6 @@ body {
 }
 
 .card-details-sections {
-    /* font-family: 'Tangerine', cursive; */
     background-color: rgba(255, 248, 220, 0.616);
     padding: 5px;
     border-radius: 5px;
@@ -125,15 +78,12 @@ body {
 }
 
 .card-details-name {
-    font-family: 'Tangerine', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
     background-color: rgba(252, 199, 130, 0.664);
     color: rgb(100, 44, 4);
     padding: 5px;
     border-radius: 5px;
-}
-
-.card-details-description {
-    /* text-align: justify; */
 }
 
 .card-details-short-desc {
@@ -153,7 +103,6 @@ span {
 
 .card-details {
     margin-top: 10px;
-    /* align-items: center; */
     text-align: center;
 }
 
@@ -162,18 +111,12 @@ span {
     font-weight: bold;
 }
 
-
-/* tooltips */
-
 .tooltip {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
-    /* If you want dots under the hoverable text */
 }
 
-
-/* Tooltip text */
 
 .tooltip .tooltiptext {
     visibility: hidden;
@@ -183,13 +126,11 @@ span {
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
-    /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
 }
 
 
-/* Show the tooltip text when you mouse over the tooltip container */
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
