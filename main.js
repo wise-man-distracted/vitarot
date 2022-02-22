@@ -5,33 +5,28 @@ var deck = []
 var inverted = []
 var total_cards = associations.length
 var default_values = ["<h1>Problema</h1>", "<h1>Perspectiva</h1>", "<h1>Solução</h1>", "<em>Representa o problema o qual o querente enfrenta no momento da tiragem</em>", "<em>Representa qual a abordagem do querente para lidar com o problema</em>", "<em>Uma sugestão de como lidar com o problema apresentado na tiragem</em>"]
-var intro_message = "<p>The Past-Present-Future spread is one of the most straightforward spreads. As the name suggests, it can offer great insight to help understand how the past influences present circumstance, what’s going on in the present moment…and how the choices you make in the present may unfold in the future.</p>"
 var screen_to_card_ratio = 5
-var min_card_width = 160
+var min_card_width = 130
 var chance_of_inverted = 0.4
 
 var three_spread_count = 1
 
 function threeSpread(element) {
     if (deck.length) {
-        if (three_spread_count <= 4) {
-            if (three_spread_count == 4)
-                document.getElementById("draw-card").innerHTML = "New Spread"
+        if (three_spread_count <= 10) {
+            if (three_spread_count == 10)
+                document.getElementById("draw-card").innerHTML = "Continuar com o baralho restante"
             drawForElement(three_spread_count++)
             updateDeckCount()
         } else {
             three_spread_count = 1
-            document.getElementById("draw-card").innerHTML = "Draw a Card"
+            document.getElementById("draw-card").innerHTML = "Tirar carta"
             resetThreeCardSpread()
         }
     } else {
         updateDeckCount("Out of cards!<br/>Reshuffle?")
     }
 
-}
-
-function updateIntroMessage() {
-    document.getElementById("intro").innerHTML = intro_message
 }
 
 function updateDeckCount(optional) {
@@ -58,11 +53,23 @@ function resetThreeCardSpread() {
     card1 = document.getElementById("card-1");
     card2 = document.getElementById("card-2");
     card3 = document.getElementById("card-3");
-    card3 = document.getElementById("card-4");
+    card4 = document.getElementById("card-4");
+    card5 = document.getElementById("card-5");
+    card6 = document.getElementById("card-6");
+    card7 = document.getElementById("card-7");
+    card8 = document.getElementById("card-8");
+    card9 = document.getElementById("card-9");
+    card10 = document.getElementById("card-10");
     card1.src = root + "/" + "back" + transparent_extension;
     card2.src = root + "/" + "back" + transparent_extension;
     card3.src = root + "/" + "back" + transparent_extension;
     card4.src = root + "/" + "back" + transparent_extension;
+    card5.src = root + "/" + "back" + transparent_extension;
+    card6.src = root + "/" + "back" + transparent_extension;
+    card7.src = root + "/" + "back" + transparent_extension;
+    card8.src = root + "/" + "back" + transparent_extension;
+    card9.src = root + "/" + "back" + transparent_extension;
+    card10.src = root + "/" + "back" + transparent_extension;
 
     // resetar detalhes
     details_collection = document.getElementsByClassName("card-details")
